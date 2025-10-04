@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Nest.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo List</h1>
+            <p class="framework-badge">Nest.js</p>
+        </header>
+
+        <div class="add-task-form">
+            <input type="text" id="taskName" placeholder="Task name" />
+            <textarea id="taskDescription" placeholder="Task description"></textarea>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
