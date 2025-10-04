@@ -11,6 +11,12 @@ application {
     mainClass.set("com.example.ApplicationKt")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -22,4 +28,10 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json")
     implementation("io.ktor:ktor-server-call-logging")
     implementation("ch.qos.logback:logback-classic:1.5.16")
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "21"
+    }
 }
